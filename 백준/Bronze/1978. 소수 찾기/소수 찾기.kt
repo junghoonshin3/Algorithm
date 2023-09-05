@@ -2,6 +2,7 @@ fun main() {
     val reader = System.`in`.bufferedReader()
     val n = reader.readLine().toInt()
     val input = reader.readLine().split(" ")
+    if (input.size != n) return
     var count = 0
     for (i in input) {
         val num = i.toInt()
