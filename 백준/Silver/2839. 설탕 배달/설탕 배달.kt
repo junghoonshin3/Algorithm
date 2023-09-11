@@ -1,20 +1,19 @@
 fun main() {
-
-    var n = readLine()!!.toInt()
-    var result = 0
-
-    while (n > 0) {
-        if (n % 5 == 0) {
-            result += n / 5
-            n %= 5
+    val reader = System.`in`.bufferedReader()
+    var kg = reader.readLine().toInt()
+    var count = 0
+    while (kg > 0) {
+        if (kg % 5 == 0) {
+            count += kg / 5
+            kg = 0
             break
         }
-        n -= 3
-        result += 1
+        kg -= 3
+        count++
     }
-    if (n != 0) {
-        result = -1
+    if (kg != 0) {
+        println(-1)
+        return
     }
-    println(result)
-
+    println(count)
 }
