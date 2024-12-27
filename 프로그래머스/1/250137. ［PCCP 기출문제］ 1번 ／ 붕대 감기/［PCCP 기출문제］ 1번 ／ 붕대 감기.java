@@ -1,15 +1,11 @@
 class Solution {
     public int solution(int[] bandage, int health, int[][] attacks) {
-
     
         int life = health;
         int successCount = 0; 
         int attackIndex = 0;
         
         for(int i = 1; i <= attacks[attacks.length-1][0]; i++){
-            if(life <= 0){
-                break;
-            }
             if(i != attacks[attackIndex][0]){
                 life += bandage[1];
                 successCount ++;
@@ -24,9 +20,12 @@ class Solution {
                  life -= attacks[attackIndex][1];
                  successCount = 0;
                  attackIndex++;
+                if(life <= 0){
+                    return -1;
+                }
             }
         }
             
-        return life <= 0 ? -1 : life;
+        return life;
     }
 }
