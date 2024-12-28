@@ -6,6 +6,8 @@ class Solution {
                 answer[i] = arr[i] / 2;
             } else if(arr[i] % 2 != 0 && arr[i] < 50) {
                 answer[i] = arr[i] * 2;
+            } else{
+                continue;
             }
         }
         return answer;
