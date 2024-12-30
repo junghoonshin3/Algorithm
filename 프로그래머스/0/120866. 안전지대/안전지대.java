@@ -9,9 +9,8 @@ class Solution {
                 if(board[i][j] == 1){
                     for(int a=i;a<=i+2;a++){
                         for(int b=j;b<=j+2;b++){
-                            // if(list[a][b] != 1){
+                            if(list[a][b]!=1)
                                 list[a][b] = 2;
-                            // }
                         }
                     }
                 }
